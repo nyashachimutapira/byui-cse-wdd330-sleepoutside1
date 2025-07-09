@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "brand": "Cedar Ridge",
+        "name": "Rimrock 2",
+        "price": 199.99,
+        "image": "images/example-product.jpg"
+    },
+    {
+        "id": 2,
+        "brand": "Marmot",
+        "name": "Ajax 3",
+        "price": 249.99,
+        "image": "images/example-product.jpg"
+    }
+]
