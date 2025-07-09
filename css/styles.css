@@ -1,0 +1,141 @@
+/* --- Basic Setup & Typography --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    --bg-color: #1a1a2e;
+    --container-color: #16213e;
+    --primary-text-color: #e94560;
+    --secondary-text-color: #f0f0f0;
+    --button-bg: #e94560;
+    --button-text: #ffffff;
+    --button-hover-bg: #c63a50;
+    --input-bg: #0f3460;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--secondary-text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* --- Main Timer Container --- */
+.timer-wrapper {
+    background: var(--container-color);
+    padding: 40px 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    transition: transform 0.3s ease;
+}
+
+.timer-wrapper:hover {
+    transform: translateY(-5px);
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: var(--secondary-text-color);
+}
+
+/* --- Countdown Display --- */
+#countdown {
+    font-size: 5rem;
+    font-weight: 600;
+    color: var(--primary-text-color);
+    margin: 20px 0;
+    line-height: 1;
+    transition: color 0.5s ease;
+}
+
+/* --- Input & Controls --- */
+.input-group {
+    margin: 30px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.input-group label {
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+
+#timeInput {
+    background-color: var(--input-bg);
+    border: 2px solid transparent;
+    color: var(--secondary-text-color);
+    border-radius: 8px;
+    padding: 10px;
+    width: 80px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#timeInput:focus {
+    outline: none;
+    border-color: var(--primary-text-color);
+    box-shadow: 0 0 10px rgba(233, 69, 96, 0.3);
+}
+
+/* Hide number input arrows */
+#timeInput::-webkit-outer-spin-button,
+#timeInput::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+#timeInput[type=number] {
+  -moz-appearance: textfield;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+button {
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    min-width: 100px;
+}
+
+button:hover {
+    background-color: var(--button-hover-bg);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(233, 69, 96, 0.2);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+button:disabled {
+    background-color: #5a6a8a;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
